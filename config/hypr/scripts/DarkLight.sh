@@ -39,7 +39,7 @@ done
 
 
 # Initialize wallpaper daemon if needed
-"$WWW_CMD" query || "$WWW_DAEMON" --format xrgb
+"$WWW_CMD" query || "$WWW_DAEMON" "${WWW_DAEMON_ARGS[@]}"
 
 # Set wallpaper options
 swww="$WWW_CMD img"

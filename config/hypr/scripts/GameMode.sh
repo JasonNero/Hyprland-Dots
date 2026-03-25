@@ -30,7 +30,7 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
     sleep 0.1
     exit
 else
-	"$WWW_DAEMON" --format xrgb && "$WWW_CMD" img "$HOME/.config/rofi/.current_wallpaper" &
+	"$WWW_DAEMON" "${WWW_DAEMON_ARGS[@]}" && "$WWW_CMD" img "$HOME/.config/rofi/.current_wallpaper" &
 	sleep 0.1
 	${SCRIPTSDIR}/WallustSwww.sh
 	sleep 0.5

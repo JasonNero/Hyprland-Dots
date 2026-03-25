@@ -142,7 +142,7 @@ apply_image_wallpaper() {
 
   if ! pgrep -x "$WWW_DAEMON" >/dev/null; then
     echo "Starting $WWW_DAEMON..."
-    "$WWW_DAEMON" --format xrgb &
+    "$WWW_DAEMON" "${WWW_DAEMON_ARGS[@]}" &
   fi
   "$WWW_CMD" img -o "$focused_monitor" "$image_path" $SWWW_PARAMS
 

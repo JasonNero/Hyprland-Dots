@@ -28,7 +28,7 @@ SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration
 
 
 if ! "$WWW_CMD" query >/dev/null 2>&1; then
-  "$WWW_DAEMON" --format xrgb &
+  "$WWW_DAEMON" "${WWW_DAEMON_ARGS[@]}" &
 fi
 
 "$WWW_CMD" img -o $focused_monitor ${RANDOMPICS} $SWWW_PARAMS

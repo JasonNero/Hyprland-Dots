@@ -12,5 +12,5 @@ SCRIPTSDIR="$HOME/.config/hypr/scripts"
 . "$SCRIPTSDIR/WallpaperCmd.sh"
 
 if command -v "$WWW_DAEMON" >/dev/null 2>&1 && command -v "$WWW_CMD" >/dev/null 2>&1; then
-  "$WWW_DAEMON" --format xrgb
+  "$WWW_DAEMON" "${WWW_DAEMON_ARGS[@]}"
 fi
